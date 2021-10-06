@@ -9,12 +9,23 @@
     </ng-container>
   </div>
   <div class="icons flex-container mt-3">
-    <div
-      *ngFor="let icona of icons"
-      class="flex-item"
-      (mouseenter)="showInfo(icona)"
-    >
+    <div class="flex-item" (mouseenter)="showInfo(0)">
+      <fa-icon [icon]="['fab', 'odnoklassniki']"></fa-icon>
+    </div>
+    <div class="flex-item" (mouseenter)="showInfo(1)">
+      <fa-icon [icon]="['far', 'envelope']"></fa-icon>
+    </div>
+    <div class="flex-item" (mouseenter)="showInfo(2)">
+      <fa-icon [icon]="['far', 'calendar']"></fa-icon>
+    </div>
+    <div class="flex-item" (mouseenter)="showInfo(3)">
       <fa-icon [icon]="['far', 'map']"></fa-icon>
+    </div>
+    <div class="flex-item" (mouseenter)="showInfo(4)">
+      <fa-icon [icon]="['fas', 'phone']"></fa-icon>
+    </div>
+    <div class="flex-item" (mouseenter)="showInfo(5)">
+      <fa-icon [icon]="['fas', 'lock']"></fa-icon>
     </div>
   </div>
 </div>

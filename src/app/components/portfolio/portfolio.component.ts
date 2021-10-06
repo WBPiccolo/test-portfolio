@@ -11,12 +11,12 @@ export class PortfolioComponent implements OnInit {
   @Input()
   portfolio!: Portfolio;
   icons = [
-    { id: '1', icon: '', text: 'Hi, My name is', value: '' },
-    { id: '2', icon: '', text: 'My email address is', value: '' },
-    { id: '3', icon: '', text: 'My birthday is', value: '' },
-    { id: '4', icon: '', text: 'My address is', value: '' },
-    { id: '5', icon: '', text: 'My phone number is', value: '' },
-    { id: '6', icon: '', text: 'My password is', value: '' },
+    { id: 1, icon: '', text: 'Hi, My name is', value: '' },
+    { id: 2, icon: '', text: 'My email address is', value: '' },
+    { id: 3, icon: '', text: 'My birthday is', value: '' },
+    { id: 4, icon: '', text: 'My address is', value: '' },
+    { id: 5, icon: '', text: 'My phone number is', value: '' },
+    { id: 6, icon: '', text: 'My password is', value: '' },
   ];
   text = '';
   value = '';
@@ -32,7 +32,8 @@ export class PortfolioComponent implements OnInit {
     this.icons[5].value = this.portfolio.login.password;
   }
 
-  showInfo(icon: any) {
+  showInfo(iconId: number) {
+    const icon = this.icons[iconId];
     console.log(icon);
     this.text = icon.text;
     this.value = icon.value;
