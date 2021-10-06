@@ -8,7 +8,9 @@
   <p style="color: white">Attenzione. Caricamento in corso...</p>
 </ngx-spinner>
 
-<portfolio-component
-  *ngIf="portfolio"
-  [portfolio]="portfolio"
-></portfolio-component>
+<div class="container site-container mx-auto d-block">
+  <portfolio-component
+    *ngIf="portfolio"
+    [portfolio]="portfolio"
+  ></portfolio-component>
+</div>

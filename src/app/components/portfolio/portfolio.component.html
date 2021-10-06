@@ -1,1 +1,20 @@
-<p>portfolio works!</p>
+<div class="mx-auto d-block">
+  <div class="image-container">
+    <img src="{{ portfolio.picture.large }}" class="rounded-circle" />
+  </div>
+  <div class="info-box mt-3">
+    <ng-container *ngIf="text && value">
+      <h4>{{ text }}</h4>
+      <h2>{{ value }}</h2>
+    </ng-container>
+  </div>
+  <div class="icons flex-container mt-3">
+    <div
+      *ngFor="let icona of icons"
+      class="flex-item"
+      (mouseenter)="showInfo(icona)"
+    >
+      {{ icona.id }}
+    </div>
+  </div>
+</div>

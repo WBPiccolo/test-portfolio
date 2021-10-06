@@ -1,0 +1,59 @@
+.image-container {
+  display: block;
+  overflow: hidden;
+}
+
+.image-container:before,
+.image-container:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 50%;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-color: #616161;
+}
+.image-container:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+.image-container:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+img {
+  vertical-align: middle;
+  border: 5px solid transparent;
+  outline: 1px solid #616161;
+}
+
+.info-box {
+  background-color: chocolate;
+  width: 70%;
+  height: 200px;
+  margin: auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+  margin: auto;
+  justify-content: space-evenly;
+  width: 70%;
+}
+
+.flex-item {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.flex-item:hover {
+  background-color: green;
+}
