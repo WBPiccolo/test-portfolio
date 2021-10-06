@@ -1,10 +1,10 @@
-<div class="mx-auto d-block">
+<div class="mx-auto mt-5">
   <div class="image-container">
     <img src="{{ portfolio.picture.large }}" class="rounded-circle" />
   </div>
   <div class="info-box mt-3">
-    <ng-container *ngIf="text && value">
-      <h4>{{ text }}</h4>
+    <ng-container *ngIf="value">
+      <h4 class="mt-3">{{ text }}</h4>
       <h2>{{ value }}</h2>
     </ng-container>
   </div>
@@ -14,7 +14,7 @@
       class="flex-item"
       (mouseenter)="showInfo(icona)"
     >
-      {{ icona.id }}
+      <fa-icon [icon]="['far', 'map']"></fa-icon>
     </div>
   </div>
 </div>

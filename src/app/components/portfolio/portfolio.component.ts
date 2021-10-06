@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as moment from 'moment';
 import { Portfolio } from 'src/app/shared/utilities';
 
 @Component({
@@ -8,14 +9,14 @@ import { Portfolio } from 'src/app/shared/utilities';
 })
 export class PortfolioComponent implements OnInit {
   @Input()
-  portfolio: any;
+  portfolio!: Portfolio;
   icons = [
-    { id: '1', icon: '', showText: 'Test icona 1' },
-    { id: '2', icon: '', showText: 'Test icona 2' },
-    { id: '3', icon: '', showText: 'Test icona 3' },
-    { id: '4', icon: '', showText: 'Test icona 4' },
-    { id: '5', icon: '', showText: 'Test icona 5' },
-    { id: '6', icon: '', showText: 'Test icona 6' },
+    { id: '1', icon: '', text: 'Hi, My name is', value: '' },
+    { id: '2', icon: '', text: 'My email address is', value: '' },
+    { id: '3', icon: '', text: 'My birthday is', value: '' },
+    { id: '4', icon: '', text: 'My address is', value: '' },
+    { id: '5', icon: '', text: 'My phone number is', value: '' },
+    { id: '6', icon: '', text: 'My password is', value: '' },
   ];
   text = '';
   value = '';
@@ -23,11 +24,17 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.portfolio);
+    this.icons[0].value = `${this.portfolio.name.first} ${this.portfolio.name.last}`;
+    this.icons[1].value = this.portfolio.email;
+    this.icons[2].value = moment(this.portfolio.dob.date).format('DD/MM/YYYY');
+    this.icons[3].value = `${this.portfolio.location.street.number} ${this.portfolio.location.street.name}`;
+    this.icons[4].value = this.portfolio.phone;
+    this.icons[5].value = this.portfolio.login.password;
   }
 
   showInfo(icon: any) {
     console.log(icon);
-    this.text = icon.showText;
-    this.value = icon.id;
+    this.text = icon.text;
+    this.value = icon.value;
   }
 }
