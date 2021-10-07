@@ -11,12 +11,12 @@ export class PortfolioComponent implements OnInit {
   @Input()
   portfolio!: Portfolio;
   icons = [
-    { id: 1, icon: '', text: 'Hi, My name is', value: '' },
-    { id: 2, icon: '', text: 'My email address is', value: '' },
-    { id: 3, icon: '', text: 'My birthday is', value: '' },
-    { id: 4, icon: '', text: 'My address is', value: '' },
-    { id: 5, icon: '', text: 'My phone number is', value: '' },
-    { id: 6, icon: '', text: 'My password is', value: '' },
+    { text: 'Hi, My name is', value: '' },
+    { text: 'My email address is', value: '' },
+    { text: 'My birthday is', value: '' },
+    { text: 'My address is', value: '' },
+    { text: 'My phone number is', value: '' },
+    { text: 'My password is', value: '' },
   ];
   text = '';
   value = '';

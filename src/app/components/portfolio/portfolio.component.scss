@@ -30,7 +30,6 @@ img {
 }
 
 .info-box {
-  background-color: chocolate;
   width: 70%;
   height: 200px;
   margin: auto;
@@ -39,14 +38,12 @@ img {
 .flex-container {
   display: flex;
   flex-wrap: nowrap;
-  background-color: DodgerBlue;
   margin: auto;
   justify-content: space-evenly;
   width: 70%;
 }
 
 .flex-item {
-  background-color: #f1f1f1;
   width: 100px;
   margin: 10px;
   text-align: center;
@@ -55,5 +52,9 @@ img {
 }
 
 .flex-item:hover {
-  background-color: green;
+  border-top: 5px solid green;
+
+  fa-icon {
+    color: green;
+  }
 }
